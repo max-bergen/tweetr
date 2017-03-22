@@ -1,0 +1,37 @@
+.tweets {
+  padding: 0.5em;
+  border-style: solid;
+  border-color: #ddd;
+  border-radius: 1em;
+  background-color: #eee;
+  margin: 2em;
+}
+
+.tweets article {
+  background-color: white;
+  padding: 2em;
+  border-radius: 1em;
+}
+
+.tweets header p {
+  float: right;
+  font-size: 75%;
+}
+
+.tweets footer {
+  border-top: 1px solid black;
+  padding-right: 14em;
+}
+
+.tweets article:hover {
+  background-color: grey;
+}
+
+.tweets img {
+  width: 25px;
+  height: 25px;
+}
+
+.tweets header {
+  border-bottom: 1px solid black;
+}
