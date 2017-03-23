@@ -18,8 +18,8 @@ module.exports = function(DataHelpers) {
   });
 
   tweetsRoutes.post("/", function(req, res) {
-    if (!req.body.text) {
-      res.status(400).json({ error: 'invalid request: no data in POST body'});
+    if (!req.body.text || (req.body.text).length > 140) {
+      res.status(400).json({ error: 'invalid request: no data or too much data in POST body'});
       return;
     }
 
