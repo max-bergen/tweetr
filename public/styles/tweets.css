@@ -8,7 +8,6 @@
 }
 
 .tweets article {
-  background-color: white;
   padding: 2em;
   border-radius: 1em;
 }
@@ -34,4 +33,9 @@
 
 .tweets header {
   border-bottom: 1px solid black;
+}
+
+.tweets > p {
+  background-color: white;
+  padding: 1em;
 }

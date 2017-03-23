@@ -45,24 +45,24 @@
 
         <h2>Compose Tweet</h2>
 
-        <form>
+        <form method="POST" action="/tweets">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" onclick="charCounter()" value="Tweet">
+          <input class="submit" type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
 
       </section>
 
-     <!--  <section class="tweets"> -->
+      <section class="tweets-container">
 
         <article class="tweets">
 
         <header>
 
-          <h2 class="name">The Weekdy</h2>
-            <p class="handle">@theweekdy</p>
+          <h2>The Weekdy</h2>
+            <p>@theweekdy</p>
 
-            <img class="avatar" src="/images/weeknd.jpg" alt="pic"/>
+            <img src="/images/weeknd.jpg" alt="pic"/>
 
         </header>
 
@@ -70,12 +70,12 @@
             God damn I'm high, my doctor told me to stop and he gave me something to pop, I mix it up with some Adderall's and I wait to get to the top
           </p>
           <footer>
-          <p class="time">10 days ago</p>
+          <p>10 days ago</p>
           <a href=""><img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-image-128.png" alt="icon" /></a>
           </footer>
         </article>
 
-  <!--   </section> -->
+    </section>
 
     </main>
 
