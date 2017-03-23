@@ -84,7 +84,7 @@ $(document).ready(function() {
   }
 
   $.ajax({
-      url: 'http://localhost:8080/tweets',
+      url: '/tweets',
       method: 'GET',
       success: function (tweetsArray) {
         renderTweets(tweetsArray);
@@ -94,17 +94,18 @@ $(document).ready(function() {
   $(function () {
   let $form = $('.submit');
   $form.on('click', function (event) {
-    //event.preventDefault();
+    event.preventDefault();
     let userTweet = $('textarea').val();
     console.log(userTweet);
-    // $.ajax({
-    //   url: 'http://localhost:8080/tweets',
-    //   method: 'POST',
-    //   success: function (){
-
-      //}
-
-    //});
+    $.ajax({
+      url: '/tweets',
+      method: 'POST',
+      data: {text: userTweet}
+    }).done(function (tweet){
+      let tweetEl = createTweetElement(tweet);
+      tweetEl.prependTo('.tweets-container');
+      $('textarea').val("");
+    })
 
   });
 
