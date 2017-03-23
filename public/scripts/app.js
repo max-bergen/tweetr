@@ -26,7 +26,7 @@ $(document).ready(function() {
     return $tweet;
 
   };
-//createTweetElement(tweetObj);
+  //createTweetElement(tweetObj);
   function renderTweets(arr){
 
     for (let key in arr){
@@ -62,6 +62,20 @@ $(document).ready(function() {
 
   });
 
+  });
+
+  $(".new-tweet").click(function() {
+          $(this).toggleClass("off");
+        });
+        let p;
+        $("button").click(function() {
+          if (p) {
+            p.prependTo(".container");
+            p = null;
+            $("textarea").focus();
+          } else {
+            p = $(".new-tweet").detach();
+          }
   });
 
 });

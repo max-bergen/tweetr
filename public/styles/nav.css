@@ -20,3 +20,14 @@
   font-size: 200%;
   line-height: 80px;
 }
+
+#nav-bar button {
+  float: right;
+  padding: 1em;
+  border-radius: 1em;
+  margin-top: 0.5em;
+}
+
+#nav-bar button:hover {
+  background-color: white;
+}

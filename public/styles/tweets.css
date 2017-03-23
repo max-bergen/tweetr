@@ -22,10 +22,6 @@
   padding-right: 14em;
 }
 
-.tweets article:hover {
-  background-color: grey;
-}
-
 .tweets img {
   width: 25px;
   height: 25px;
