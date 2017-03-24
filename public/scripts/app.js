@@ -8,17 +8,11 @@ $(document).ready(function() {
 
   function createTweetElement(obj){
     let $tweet = $('<article>').addClass('tweets');
-    let name = obj.user.name;
-    let handle = obj.user.handle;
-    let content = obj.content.text
-    let avatar = obj.user.avatars.regular;
-    let time = obj.created_at;
+    let $header = $('<header><h2>' + obj.user.name + '</h2>-<p>' + obj.user.handle + '</p><img src=' + obj.user.avatars.regular + ' alt="pic"/></header>');
+    let $content = $('<p>' + obj.content.text + '</p>');
+    let $footer = $('<footer><p>' + obj.created_at + '</p></footer>');
 
-    let $header = $('<header><h2>' + name + '</h2><p>' + handle + '</p><img src=' + avatar + ' alt="pic"/></header>');
-    let $content = $('<p>' + content + '</p>');
-    let $footer = $('<footer><p>' + time + '</p></footer>');
-
-    $header.attr("src", avatar);
+    $header.attr("src", obj.user.avatars.regular);
     $header.appendTo($tweet);
     $content.appendTo($tweet);
     $footer.appendTo($tweet);
