@@ -1,7 +1,5 @@
 "use strict";
 
-// Basic express setup:
-
 const PORT          = 8080;
 const express       = require("express");
 const bodyParser    = require("body-parser");
@@ -16,31 +14,10 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
     console.error(`Failed to connect: ${MONGODB_URI}`);
     throw err;
   }
-
   console.log(`Connected to mongodb: ${MONGODB_URI}`);
-
-  // function getTweets(callback) {
-  //   db.collection("tweets").find().toArray((err, tweets) => {
-  //     if (err) {
-  //       return callback(err);
-  //     }
-  //     callback(null, tweets);
-  //   });
-  // }
-
-  // getTweets((err, tweets) => {
-  //   if (err) throw err;
-  //   //console.log(tweets);
-  // db.close();
-  //   })
-
-
-
-
-const DataHelpers = require("./lib/data-helpers.js")(db);
-const tweetsRoutes = require("./routes/tweets")(DataHelpers);
-app.use("/tweets", tweetsRoutes);
-
+  const DataHelpers = require("./lib/data-helpers.js")(db);
+  const tweetsRoutes = require("./routes/tweets")(DataHelpers);
+  app.use("/tweets", tweetsRoutes);
 });
 
 app.listen(PORT, () => {
