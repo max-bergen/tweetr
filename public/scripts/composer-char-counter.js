@@ -5,7 +5,6 @@ $(document).ready(function() {
     let tweetLength = tweet.length;
     let charsRem = 139 - tweetLength;
     let counter = $(".counter").html(charsRem);
-    // console.log(charsRem);
     if (charsRem >= 0) {
       $(".counter").css("color", "black");
     } else {

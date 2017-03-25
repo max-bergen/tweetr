@@ -10,6 +10,11 @@
 .tweets article {
   padding: 2em;
   border-radius: 1em;
+  background-color: black;
+}
+
+.tweets:hover {
+  background-color: tomato;
 }
 
 .tweets header p {
@@ -20,6 +25,16 @@
 .tweets footer {
   border-top: 1px solid black;
   padding-right: 14em;
+}
+
+.share {
+  width: 25px;
+  height: 25px;
+  visibility: hidden;
+}
+
+.tweets:hover > footer .share{
+  visibility: visible;
 }
 
 .tweets img {

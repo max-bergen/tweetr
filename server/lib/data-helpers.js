@@ -1,7 +1,5 @@
 "use strict";
 
-const simulateDelay = require("./util/simulate-delay");
-
 module.exports = function makeDataHelpers(db) {
   return {
     saveTweet: function(tweet, callback) {

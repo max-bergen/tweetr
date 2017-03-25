@@ -27,17 +27,17 @@
 
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
-    <script type="text/javascript" src="/scripts/tweets.js"></script>
-
   </head>
 
   <body>
 
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
+
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
-      <button>Compose</button>
+      <button id="compose">Compose</button>
+
     </nav>
 
     <!-- Page-specific (main) content here -->
@@ -48,9 +48,11 @@
         <h2>Compose Tweet</h2>
 
         <form method="POST" action="/tweets">
+
           <textarea name="text" placeholder="What are you humming about?"></textarea>
           <input class="submit" type="submit" value="Tweet">
           <span class="counter">140</span>
+
         </form>
 
       </section>
@@ -59,19 +61,22 @@
 
         <article class="tweets">
 
-        <header>
+          <header>
 
-          <h2>The Weekdy</h2>
+            <h2>The Weekdy</h2>
             <p>@theweekdy</p>
-
             <img src="/images/weeknd.jpg" alt="pic"/>
-        </header>
-          <p class="content">
-            God damn I'm high, my doctor told me to stop and he gave me something to pop, I mix it up with some Adderall's and I wait to get to the top
-          </p>
+
+          </header>
+
+            <p class="content">
+              God damn I'm high, my doctor told me to stop and he gave me something to pop, I mix it up with some Adderall's and I wait to get to the top
+            </p>
+
           <footer>
-          <p>10 days ago</p>
-          <a href=""><img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-image-128.png" alt="icon" /></a>
+
+            <p>10 days ago</p>
+            <input type="image" src="/images/share.png" name="share" class="share"/>
 
           </footer>
 

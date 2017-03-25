@@ -1,15 +1,17 @@
 $(document).ready(function() {
+
   function createTweetElement(obj){
     let $tweet = $('<article>').addClass('tweets');
     let $header = $('<header><h2>' + obj.user.name + '</h2>-<p>' + obj.user.handle + '</p><img src=' + obj.user.avatars.regular + ' alt="pic"/></header>');
     let $content = $('<p>' + obj.content.text + '</p>');
-    let $footer = $('<footer><p>' + obj.created_at + '</p></footer>');
+    let $footer = $('<footer><p>' + obj.created_at + '</p><input type="image" src="/images/share.png" name="share" class="share"/></footer>');
     $header.attr("src", obj.user.avatars.regular);
     $header.appendTo($tweet);
     $content.appendTo($tweet);
     $footer.appendTo($tweet);
     return $tweet;
   };
+
   function renderTweets(arr){
     for (let key in arr){
       let tweet = createTweetElement(arr[key]);
@@ -23,6 +25,7 @@ $(document).ready(function() {
       renderTweets(tweetsArray);
     }
   });
+
   $(function () {
     let $form = $('.submit');
     $form.on('click', function (event) {
@@ -39,6 +42,7 @@ $(document).ready(function() {
       })
     });
   });
+
   $(".new-tweet").click(function() {
           $(this).toggleClass("off");
         });
@@ -52,6 +56,8 @@ $(document).ready(function() {
             p = $(".new-tweet").detach();
           }
   });
+
 });
+
 
 
